@@ -1,0 +1,3210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://guruholidayandfleet.com/">
+
+    <title>Guru Holiday & Fleet | Travel & Car Rental in Kerala</title>
+
+    <meta name="description"
+          content="Guru Holiday and Fleet offers comfortable, safe and affordable car rental and travel services in Kerala.">
+
+    <style>
+
+        /* =========================
+           ROOT
+        ========================= */
+
+        :root {
+            --navy: #10243e;
+            --navy-dark: #081827;
+            --gold: #c9a45c;
+            --gold-light: #e2c88e;
+            --cream: #f7f4ed;
+            --white: #ffffff;
+            --text: #263238;
+            --muted: #69737b;
+            --border: #e8e4dc;
+            --shadow: 0 15px 40px rgba(16,36,62,.10);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        section {
+            padding: 90px 0;
+        }
+
+
+        /* =========================
+           PRELOADER
+        ========================= */
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity .6s ease, visibility .6s ease;
+        }
+
+
+        #preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        .loader-logo {
+            width: 230px;
+            max-width: 70vw;
+            animation: logoZoom 2s ease-in-out forwards;
+        }
+
+
+        @keyframes logoZoom {
+
+            0% {
+                transform: scale(.65);
+                opacity: 0;
+            }
+
+            30% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            70% {
+                transform: scale(1.08);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           HEADER / NAVBAR
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .navbar {
+            min-height: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .logo img {
+            width: 190px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+
+        .nav-call {
+            padding: 11px 18px;
+            background: var(--navy);
+            color: var(--white) !important;
+            border-radius: 5px;
+        }
+
+
+        .nav-call:hover {
+            background: var(--gold);
+            color: var(--navy) !important;
+        }
+
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 27px;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    rgba(8,24,39,.72),
+                    rgba(8,24,39,.72)
+                ),
+                url("g2.jpg") center/cover no-repeat;
+            color: var(--white);
+        }
+
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+
+        .hero-tag {
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+
+        .hero p {
+            font-size: 18px;
+            max-width: 620px;
+            color: #f1f1f1;
+            margin-bottom: 30px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 23px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+
+        .btn-outline {
+            border-color: rgba(255,255,255,.7);
+            color: var(--white);
+            background: transparent;
+        }
+
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+
+        .btn-dark {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+
+        .btn-dark:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+        ========================= */
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+
+        .section-heading span {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.2;
+            margin: 10px 0 15px;
+        }
+
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--cream);
+        }
+
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+
+        .about-content h3 {
+            color: var(--navy);
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+
+        .about-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+
+        .about-point {
+            border-left: 3px solid var(--gold);
+            padding-left: 14px;
+        }
+
+
+        .about-point strong {
+            display: block;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+
+        .about-point span {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+
+        .service-card {
+            padding: 30px 23px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            border-radius: 7px;
+            transition: .3s;
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold-light);
+        }
+
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+
+        .service-card h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* TRIVANDRUM SIGHTSEEING — ROUTE ITINERARY */
+        .sightseeing { background: linear-gradient(180deg, #fbf8f1 0%, #fff 100%); overflow: hidden; }
+        .sightseeing-intro { max-width: 760px; margin: 0 auto 42px; text-align: center; }
+        .sightseeing-intro p { max-width: 680px; margin: 12px auto 0; }
+        .itinerary-layout { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(280px,.75fr); gap: 28px; align-items: start; }
+        .route-card,.ride-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 16px 38px rgba(13,31,48,.07); overflow: hidden; }
+        .route-card-head { padding: 24px 28px; background: var(--navy); color: var(--white); display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+        .route-card-head h3 { color: var(--white); font-size: 21px; margin: 0; }
+        .route-card-head p { color: #e2e8ed; font-size: 13px; margin-top: 5px; }
+        .route-label { flex: 0 0 auto; padding: 7px 11px; border: 1px solid rgba(255,255,255,.28); border-radius: 30px; color: #f0d7a0; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+        .route-list { list-style: none; padding: 25px 28px 28px; margin: 0; }
+        .route-stop { position: relative; display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 15px; min-height: 68px; padding-bottom: 20px; }
+        .route-stop:last-child { padding-bottom: 0; min-height: 42px; }
+        .route-stop:not(:last-child)::after { content: ''; position: absolute; left: 20px; top: 40px; bottom: 0; width: 2px; background: linear-gradient(to bottom,#d8b66e,#e9e1d1); }
+        .route-number { position: relative; z-index: 1; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--navy); background: #f5e8c9; border: 1px solid #e3c987; font-size: 14px; font-weight: 800; }
+        .route-stop h4 { margin: 2px 0 4px; color: var(--navy); font-size: 16px; font-weight: 750; }
+        .route-stop p { color: var(--muted); font-size: 12px; margin: 0; }
+        .ride-card { padding: 27px; }
+        .ride-kicker { display: inline-flex; align-items: center; gap: 7px; color: #8c6a2b; font-size: 11px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 11px; }
+        .ride-card h3 { color: var(--navy); font-size: 23px; line-height: 1.25; margin-bottom: 9px; }
+        .ride-card > p { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
+        .vehicle-group { margin-top: 19px; }
+        .vehicle-group h4 { display: flex; align-items: center; gap: 8px; color: var(--navy); font-size: 13px; margin-bottom: 10px; }
+        .vehicle-group h4 span { color: #9b7b3f; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; }
+        .vehicle-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .vehicle-chip { display: inline-flex; align-items: center; padding: 9px 11px; border-radius: 8px; border: 1px solid #e8dfce; background: #fcfaf6; color: var(--navy); font-size: 12px; font-weight: 700; }
+        .sightseeing-cta { margin-top: 28px; padding: 27px 30px; background: linear-gradient(110deg,var(--navy),#19364e); color: var(--white); border-radius: 14px; display: flex; justify-content: space-between; align-items: center; gap: 22px; box-shadow: 0 14px 32px rgba(13,31,48,.14); }
+        .sightseeing-cta h3 { color: var(--white); font-size: 22px; margin-bottom: 6px; }
+        .sightseeing-cta p { color: #e1e8ed; font-size: 14px; }
+        .sightseeing-cta .btn { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 9px; }
+        @media (max-width: 900px) { .itinerary-layout { grid-template-columns: 1fr; } .ride-card { padding: 25px; } }
+        /* =========================
+           FLEET
+           FLEET + PRICING COMBINED
+        ========================= */
+
+        .fleet {
+            background: var(--cream);
+        }
+
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+
+        .fleet-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(0,0,0,.04);
+            transition: .3s;
+        }
+
+
+        .fleet-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+
+        .fleet-image {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+        }
+
+
+        .fleet-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+
+        .fleet-card:hover .fleet-image img {
+            transform: scale(1.05);
+        }
+
+
+        .fleet-content {
+            padding: 22px;
+        }
+
+
+        .fleet-content h3 {
+            color: var(--navy);
+            margin-bottom: 9px;
+            font-size: 21px;
+        }
+
+
+        .fleet-spec {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+
+        .fleet-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+
+        .fleet-price span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+
+        .fleet-price strong {
+            color: var(--navy);
+            font-size: 20px;
+        }
+
+
+        .request-card {
+            grid-column: 1 / -1;
+            padding: 30px;
+            border: 1px dashed var(--gold);
+            background: var(--white);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+
+        .request-card h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+
+        .request-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+
+        .seater-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+
+        .seater {
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--navy);
+            font-size: 13px;
+            background: var(--cream);
+        }
+
+
+        /* =========================
+           GALLERY
+           GALLERY + VIDEOS COMBINED
+        ========================= */
+
+        .gallery {
+            background: var(--white);
+        }
+
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+
+        /* FIXED SAME-SIZE IMAGE BOX */
+
+        .gallery-item {
+            width: 100%;
+            height: 270px;
+            overflow: hidden;
+            border-radius: 7px;
+            position: relative;
+            background: #eee;
+        }
+
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            transition: .5s;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+
+        .gallery-label {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            background: rgba(8,24,39,.82);
+            color: var(--white);
+            padding: 7px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+
+        .media-title {
+            text-align: center;
+            margin: 55px 0 25px;
+        }
+
+
+        .media-title h3 {
+            color: var(--navy);
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+
+        .media-title p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+    /* CENTER LAST TWO ITEMS */
+    @media (min-width: 851px) {
+
+        .gallery-grid {
+            grid-template-columns: repeat(9, 1fr);
+        }
+
+        .gallery-grid .gallery-item:nth-child(1),
+        .gallery-grid .gallery-item:nth-child(2),
+        .gallery-grid .gallery-item:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        .gallery-grid .gallery-item:nth-child(4) {
+            grid-column: 2 / 5;
+        }
+
+        .gallery-grid .gallery-item:nth-child(5) {
+            grid-column: 5 / 8;
+        }
+
+
+        .video-grid {
+            grid-template-columns: repeat(9, 1fr);
+        }
+
+        .video-grid .video-card:nth-child(1),
+        .video-grid .video-card:nth-child(2),
+        .video-grid .video-card:nth-child(3) {
+            grid-column: span 3;
+        }
+
+        .video-grid .video-card:nth-child(4) {
+            grid-column: 2 / 5;
+        }
+
+        .video-grid .video-card:nth-child(5) {
+            grid-column: 5 / 8;
+        }
+
+}
+
+
+/* NEXT CSS */
+.video-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+        .video-card {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+
+        .video-card video {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            background: #000;
+        }
+
+
+        .video-caption {
+            padding: 15px 18px;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           REVIEWS
+        ========================= */
+
+        .reviews {
+            background: var(--cream);
+        }
+
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 55px;
+        }
+
+
+        .review-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 28px;
+            box-shadow: 0 7px 25px rgba(0,0,0,.04);
+        }
+
+
+        .review-stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+
+        .review-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        .review-card h4 {
+            color: var(--navy);
+            font-size: 15px;
+        }
+
+
+        .review-card small {
+            color: #92999e;
+        }
+
+
+        /* =========================
+           REVIEW FORM
+        ========================= */
+
+        .review-form {
+            max-width: 850px;
+            margin: auto;
+            padding: 35px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+
+        .review-form h3 {
+            color: var(--navy);
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+
+        .review-form > p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+
+        .field label {
+            display: block;
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: 1px solid #dcdfe2;
+            background: #fff;
+            padding: 13px 14px;
+            border-radius: 5px;
+            outline: none;
+            color: var(--text);
+            transition: .3s;
+        }
+
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201,164,92,.12);
+        }
+
+
+        .field textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+
+        .form-message {
+            margin-top: 15px;
+            color: #42734a;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    rgba(8,24,39,.78),
+                    rgba(8,24,39,.78)
+                ),
+                url("g3.jpg") center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+        }
+
+
+        .cta-content {
+            max-width: 720px;
+            margin: auto;
+        }
+
+
+        .cta h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 15px;
+        }
+
+
+        .cta p {
+            color: #e8ebed;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: var(--white);
+        }
+
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: stretch;
+        }
+
+
+        .contact-info h3 {
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+
+
+        .contact-info > p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        .contact-icon {
+            flex: 0 0 43px;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .contact-item strong {
+            display: block;
+            color: var(--navy);
+            margin-bottom: 2px;
+        }
+
+
+        .contact-item span,
+        .contact-item a {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+
+        .map {
+            min-height: 430px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 430px;
+            border: 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #fff;
+            color: var(--navy);
+            padding: 45px 0 25px;
+            border-top: 1px solid #e8e4dc;
+        }
+
+
+        .footer-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e8e4dc;
+}
+
+.footer-brand {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-brand img {
+    width: 160px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #69737B;
+    max-width: 360px;
+    font-size: 14px;
+    text-align: center;
+}
+        }
+
+
+        footer h4 {
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .footer-links a {
+            color: #69737B;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding-top: 22px;
+            color: #69737B;
+            font-size: 12px;
+        }
+
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--navy);
+            transition: .3s;
+        }
+
+
+        .social-links a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            transition: .3s;
+        }
+
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                gap: 17px;
+            }
+
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .fleet-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+
+            .nav-links {
+                position: absolute;
+                top: 95px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px 5%;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 10px 20px rgba(0,0,0,.05);
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+            }
+
+
+            .nav-call {
+                text-align: center;
+            }
+
+
+            .about-grid,
+            .contact-grid,
+            .sightseeing-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .sightseeing-cta {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+
+            .about-image img {
+                height: 350px;
+            }
+
+
+            /* GALLERY - SAME SIZE ON TABLET */
+
+            .gallery-grid,
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .gallery-item {
+                height: 250px;
+            }
+
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+
+            .navbar {
+                min-height: 82px;
+            }
+
+
+            .logo img {
+                width: 155px;
+                height: 72px;
+            }
+
+
+            .nav-links {
+                top: 82px;
+            }
+
+
+            .hero {
+                min-height: 570px;
+            }
+
+
+            .hero p {
+                font-size: 16px;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+
+            .services-grid,
+            .fleet-grid,
+            .gallery-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sightseeing-card {
+                padding: 23px 18px;
+            }
+
+            .places-list {
+                grid-template-columns: 1fr;
+            }
+
+
+            /* GALLERY - SAME SIZE ON MOBILE */
+
+            .gallery-item {
+                height: 250px;
+            }
+
+
+            .video-card video {
+                height: 240px;
+            }
+
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+
+            .review-form {
+                padding: 25px 20px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+
+            .map,
+            .map iframe {
+                min-height: 350px;
+            }
+
+        }
+
+    
+
+        /* =========================
+           SIGHTSEEING PACKAGE GALLERY
+        ========================= */
+        .sightseeing-packages {
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            margin-top: 12px;
+        }
+        .sightseeing-package {
+            padding-bottom: 34px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sightseeing-package:last-child { border-bottom: 0; padding-bottom: 0; }
+        .package-kicker {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .sightseeing-package h3 {
+            color: var(--navy);
+            font-size: clamp(23px, 3vw, 30px);
+            margin-bottom: 8px;
+        }
+        .package-description {
+            color: var(--muted);
+            margin-bottom: 22px;
+            line-height: 1.7;
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px 18px;
+        }
+        .package-card {
+            min-width: 0;
+            overflow: hidden;
+        }
+        .package-card img {
+            display: block;
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: var(--cream);
+        }
+        .package-number {
+            display: block;
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            margin: 11px 0 4px;
+        }
+        .package-card h4 {
+            color: var(--navy);
+            font-size: 15px;
+            line-height: 1.45;
+        }
+        .package-card.center-last {
+            grid-column: 2;
+        }
+        .package-grid.two-centered {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: 66.666667%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sightseeing-vehicles {
+            margin-top: 44px;
+        }
+        .sightseeing-vehicles .section-heading { margin-bottom: 24px; }
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+        .vehicle-box {
+            border: 1px solid #e2d5b9;
+            border-radius: 8px;
+            padding: 20px;
+            background: var(--cream);
+        }
+        .vehicle-box h4 { color: var(--navy); margin-bottom: 6px; font-size: 16px; }
+        .vehicle-box p { color: var(--muted); font-size: 14px; }
+        @media (max-width: 760px) {
+            .package-grid { gap: 18px 12px; }
+            .package-card img { height: 150px; }
+            .package-card h4 { font-size: 13px; }
+            .package-number { margin-top: 8px; }
+        }
+        @media (max-width: 520px) {
+            .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .package-card.center-last { grid-column: 1 / -1; width: calc((100% - 12px) / 2); justify-self: center; }
+            .package-grid.two-centered { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .package-card img { height: 135px; }
+            .vehicle-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+    
+        /* Preview additions: pilgrimage cards follow the existing package card system */
+        .pilgrimage-block { margin-top: 70px; }
+        .pilgrimage-grid { row-gap: 28px; }
+        .pilgrimage-grid .package-card { display:flex; flex-direction:column; align-items:flex-start; }
+        .pilgrimage-grid .package-card .btn { margin-top:12px; font-size:12px; padding:10px 14px; }
+        .pilgrimage-grid .package-card:nth-child(4) { grid-column: 1 / 2; margin-left: calc(50% + 8px); }
+        .pilgrimage-grid .package-card:nth-child(5) { grid-column: 2 / 3; margin-left: calc(50% + 8px); }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PRELOADER
+    ========================= -->
+
+    <div id="preloader">
+
+        <img
+            src="logo.jpg"
+            alt="Guru Holiday and Fleet"
+            class="loader-logo"
+        >
+
+    </div>
+
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+
+                <img
+                    src="logo.jpg"
+                    alt="Guru Holiday and Fleet Logo"
+                >
+
+            </a>
+
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open Menu"
+            >
+                ☰
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#sightseeing">Sightseeing</a>
+                </li>
+
+                <li>
+                    <a href="#fleet">Fleet</a>
+                </li>
+
+                <li>
+                    <a href="#gallery">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#reviews">Reviews</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <li>
+                    <a
+                        href="tel:+919544202811"
+                        class="nav-call"
+                    >
+                        Call Now
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+                <div class="hero-tag">
+                    Guru Holiday and Fleet
+                </div>
+
+
+                <h1>
+                    Your Journey,
+                    <span>Our Priority</span>
+                </h1>
+
+
+                <p>
+                    Comfortable travel, trusted journeys and
+                    reliable vehicles for your Kerala trips.
+                    Travel with comfort, safety and confidence.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#fleet"
+                        class="btn btn-primary"
+                    >
+                        Explore Our Fleet
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/919544202811"
+                        target="_blank"
+                        class="btn btn-outline"
+                    >
+                        WhatsApp Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image reveal">
+
+                    <img
+                        src="g2.jpg"
+                        alt="Guru Holiday and Fleet Travel"
+                    >
+
+                </div>
+
+
+                <div class="about-content reveal">
+
+                    <div class="section-heading"
+                         style="text-align:left;margin:0 0 25px;">
+
+                        <span>About Us</span>
+
+                        <h2>
+                            Travel Made Comfortable
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Guru Holiday and Fleet is dedicated to
+                        providing comfortable, safe and dependable
+                        travel solutions for individuals, families
+                        and groups travelling across Kerala.
+                    </p>
+
+
+                    <p>
+                        Whether you need a car for a short city trip,
+                        a family journey, airport transportation or
+                        a longer holiday, our fleet is designed to
+                        make your travel smooth and convenient.
+                    </p>
+
+
+                    <div class="about-points">
+
+                        <div class="about-point">
+
+                            <strong>
+                                Comfort You Deserve
+                            </strong>
+
+                            <span>
+                                Clean and comfortable vehicles
+                                for your journey.
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <strong>
+                                Safety You Can Trust
+                            </strong>
+
+                            <span>
+                                Reliable travel with customer
+                                safety as a priority.
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <strong>
+                                ₹ Prices You'll Love
+                            </strong>
+
+                            <span>
+                                Practical and transparent pricing
+                                for your travel needs.
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <strong>
+                                Trusted Service
+                            </strong>
+
+                            <span>
+                                Friendly service from booking
+                                to destination.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Our Services</span>
+
+                <h2>
+                    Travel Solutions For Every Journey
+                </h2>
+
+                <p>
+                    From everyday transportation to holiday travel,
+                    we help make every journey simple and comfortable.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        🚗
+                    </div>
+
+                    <h3>
+                        Car Rental
+                    </h3>
+
+                    <p>
+                        Comfortable vehicles for personal,
+                        family and business travel.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        ✈
+                    </div>
+
+                    <h3>
+                        Airport Transfers
+                    </h3>
+
+                    <p>
+                        Convenient pickup and drop services
+                        for stress-free airport travel.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        🏖
+                    </div>
+
+                    <h3>
+                        Holiday Travel
+                    </h3>
+
+                    <p>
+                        Travel comfortably to Kerala's
+                        beautiful destinations.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        Group Travel
+                    </h3>
+
+                    <p>
+                        Larger vehicles for family functions,
+                        tours and group journeys.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TRIVANDRUM SIGHTSEEING
+    ========================= -->
+    <section class="sightseeing" id="sightseeing">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span>Explore Kerala</span>
+                <h2>Sightseeing Packages</h2>
+                <p>Discover beautiful destinations, cultural landmarks and scenic landscapes with Guru Holiday &amp; Fleet.</p>
+            </div>
+
+            <div class="sightseeing-packages">
+                <article class="sightseeing-package reveal">
+                    <span class="package-kicker">PACKAGE 1</span>
+                    <h3>Explore Trivandrum</h3>
+                    <p class="package-description">Discover the beauty, culture and coastal charm of Kerala.</p>
+                    <div class="package-grid">
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/Onvie6pL1rb7e3kAaCsKlN5k2Qx5obb8AaqB7fjzGdUDoxU1NsG8SvaXhrVLxLx4ZVx7rZj6D0xFSGb0d0Or5ZUNUFKNK_YmbRZndoj0jfrmvLvJDJ2IVBovAWHsTLcB7z0ObN-QBQ7SWWtXRiodh9UK52cU6AOvBOQXm4Kb9i4?purpose=inline" alt="Padmanabhaswamy Temple" loading="lazy"><span class="package-number">01</span><h4>Padmanabhaswamy Temple</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/-efbp9rW8HfyP0Gg9MViyvoKxxRP_D0R3Lor8ys7df4k6LVvVh8Prn5BdO-Wie2ErryzA5JIck0KMvaJMP_bL0e_It_SDqQLWxWKwVuE7Uk7hJLUaovsxvzjYnf6TiQuUQhlL5toWTO5EWDKa8I6BLaCFFTguO2P62LgGWBDCzA?purpose=inline" alt="Museum in Thiruvananthapuram" loading="lazy"><span class="package-number">02</span><h4>Museum</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/_hpuMYK1xs2BKVzPw_ESvhPaNl9wHHMXrA0qif8ZyfbWIghEKa1e72hR80pgB90UOKxs-n2Fk3DshZAX0xobbvZzhiilg1k1M5YW0qElovpKYp7c2NoQ6Vlwfgo2PnGkKV1ZGrQLO-lusTg1jmMYkFBQsH0WYbZneETIae9CGvQ?purpose=inline" alt="Beemapally Mosque" loading="lazy"><span class="package-number">03</span><h4>Beemapally Mosque</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/5-bH6_EmdH7287UZqFKw-5qjwBDZGBveGArT0HaMH3qTBdNCkBa6VO_5N1IAM9pJnrsLFPwc5SxVUREzDvcH3wuaBy3HrxqjkZ9omUgfy9YUkW8r3hogR4EXGVJVwh1QhD4xrMk4jVYeJEPczEwLyUA10HGFxoeS8CZtPXNqxa4?purpose=inline" alt="Shangumugham Beach" loading="lazy"><span class="package-number">04</span><h4>Shangumugham Beach</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/J_pz3C1VP3970VaQKGb1FaW__WB4vp2zvmcJrmCJ_OC1UZk9v_59wE-tbB0HDlCeeTlFFC86JrEqCaYvDT3bOEARKcELFTns4p11Xz-_fl_4cN49y3RtN80dre429LhWi4b57hlhdnB_cdyH1_ZZ3KGCez5dLltclj9qWBT1d6M?purpose=inline" alt="Kovalam Beach" loading="lazy"><span class="package-number">05</span><h4>Kovalam Beach</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/kLEYJkO7B9UH5yUzjJRehycI8_V25nxLcdNujEOOWVqcXQJ9M6K8MqG_g8YOAdeT5hKKATxURB9ii7MAFB2kDLu6M078ioB4KAmWZaJisCqvi6M9wzGVV-jQbFWvp5XkEULcopfG1p-5MUYeGhienmtvyIBjcAKVDGq5_iu2xdE?purpose=inline" alt="Azhimala Shiva Temple" loading="lazy"><span class="package-number">06</span><h4>Azhimala Shiva Temple</h4></div>
+                        <div class="package-card center-last"><img src="https://images.openai.com/static-rsc-4/keNk1ijbRdx0-NeGXyWqNczIC7Tovjy-hqjPqZSPk1sUS_hi3tWjIdyd3EpSB7halpLwII_EkODD-noXA_vPGIktRtqwq73QWMMSrbJB0zW4sothQMm7qlFGeckUG8ztsjYTIaOnpdnzzHiVtjx7VozsEFfp4qKf3o9c_e4q36vXRs-vJTPIznnuMqrCXa2j?purpose=inline" alt="Poovar backwaters" loading="lazy"><span class="package-number">07</span><h4>Poovar</h4></div>
+                    </div>
+                </article>
+
+                <article class="sightseeing-package reveal">
+                    <span class="package-kicker">PACKAGE 2</span>
+                    <h3>Coastal Escape</h3>
+                    <p class="package-description">Discover spectacular cliffs, beautiful beaches and peaceful backwaters.</p>
+                    <div class="package-grid">
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/LBaybmc7ecS5PxlfDgWeilvZRpyo7LrPbf7Y9hXgOMungpaQ3ae0jxYkUbsexuVJA8qXUQLGFdTXSVMmbiGcTZEBXYBIc_limInJXE20Js1lfUBoQFOKaCLvjZx86yzu0uAa4eDzR8ez2cj0S4X0xygi_iMkN7Hf9ar48_GTd-E?purpose=inline" alt="Jatayu Earth Center" loading="lazy"><span class="package-number">01</span><h4>Jatayu Earth Center</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/-BbRq4R5_egl71CkFBqxLAJokMUApYg_Vh9wNMU5dpomtI1pmOAyHSPPfvqj_4jMzxEtu918ZF98twU6XHBqVhogHNKKv24P3vRpL43i4-fYnw3q4nCQRoEnl2Ue3lB9n--pTVTNek_zIZtp7MLh9jqsEI1I7PWnujWPJrDJwPY?purpose=inline" alt="Varkala Beach" loading="lazy"><span class="package-number">02</span><h4>Varkala Beach</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/rszH2dYp3TubGur6PPb9KlNk5wydhYeE4h8hnvNeDhmqKErY8BaYs0AnCzA7CyXFSOb9k7Rd-Fi3zphNFrgTOyPOOU-ehDBOJAqnKZQIni6_WB0eAu1GPfxUZGQLB9pBoVNe9HOsIgBaFIod_Jys2VrbD2IKWaJF5PLjFYGStI4?purpose=inline" alt="Kappil Beach" loading="lazy"><span class="package-number">03</span><h4>Kappil</h4></div>
+                    </div>
+                </article>
+
+                <article class="sightseeing-package reveal">
+                    <span class="package-kicker">PACKAGE 3</span>
+                    <h3>Hills &amp; Nature</h3>
+                    <p class="package-description">Enjoy refreshing hill scenery, forest landscapes and a peaceful escape into nature.</p>
+                    <div class="package-grid two-centered">
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/FOOVPoTvt_8Xq2Y_TJHnMiS09nGtTyU8A-ZULeEYteuNm_tKPoB0zc2DKO3Al0oZ48IqTaEu9XkWT4znBtB_0P-oWuIHEjP1rRA3BLD-IjroFTfw5c4Cf-ug6QyjWxjI32mFIfZNB-gv6_tFf_bKn8dXseIqPm0QfpqLhk0-vTI?purpose=inline" alt="Kallar river and nature" loading="lazy"><span class="package-number">01</span><h4>Kallar</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/2WL1RH-g6QteIS6yPx3YTdHL0u1Pp84z5m--iADahwtn3jxG_TVDFF659bF6vhuX_AM0yBtQjgLHQtLvtS7ja3xdMoAEykB3ojhebxNHMhDNfQzvhoG-jibbOzc2jmzNxHGVdO_CCervp4ueLcxeqggJ3YAgccte88iTU2Q6A7c?purpose=inline" alt="Ponmudi hills in Kerala" loading="lazy"><span class="package-number">02</span><h4>Ponmudi</h4></div>
+                    </div>
+                </article>
+
+                <article class="sightseeing-package reveal">
+                    <span class="package-kicker">PACKAGE 4</span>
+                    <h3>Southern Wonders</h3>
+                    <p class="package-description">Explore coastal landmarks, royal heritage and scenic waterfalls.</p>
+                    <div class="package-grid">
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/zADRLXx05vjrcwvrrjZkHeAYhODF9yWMg-CD9zayLD7RdWcjsIQWh45QBLzzeWYhH5BAPaheTPiz8T6afE1plflPiLVULjZiMNjKWbXzdWFydYEO8CY_gKsfsdQ3thfK9BsFWInLgKgqgMPJ2tf52ucqJR6fb7BTjdesctEVfpo?purpose=inline" alt="Kanyakumari coast" loading="lazy"><span class="package-number">01</span><h4>Kanyakumari</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/-W6wek9RSnzsiNIJA7XOU6zbqtXeZK4EeE0a4DczZQPVEu87pLaQPYiEJnYIIfBFLzKXYnoq0nx2pjoc73V5mum5NPu9P9aTEB1PxKQ2Ay9d4OQXsDis45qABmD6LOnBPapvxp33Z-C17IOIXrQ7nC1VuS5-6AXUSVmCAcePk3k?purpose=inline" alt="Padmanabhapuram Palace" loading="lazy"><span class="package-number">02</span><h4>Padmanabhapuram Palace</h4></div>
+                        <div class="package-card"><img src="https://images.openai.com/static-rsc-4/S-B7OElXEOgt2DywJM4oMEeW9djVkuQvH3_GVImucan_jdJ4V-rzlQjMlRlgdzFSo2iD0lqjwS-aKM68y-1bjVlQfNyQ3D3_glroQ-eNxlVoCrMZYhKdJHVBdFlNWNeJKYC_uokH-jfcqY0GPejh61IniaHVU0bO6cVu5bbZuD8?purpose=inline" alt="Thirparappu Waterfalls" loading="lazy"><span class="package-number">03</span><h4>Thirparappu Waterfalls</h4></div>
+                        <div class="package-card center-last"><img src="https://images.openai.com/static-rsc-4/Hie2dwX5fmQeMql4tx6yi5Hh5VVnkPoUQLzmf15geD7BrCSmEGMHIygVGceifTiZ2rfJC-7xCRgZyIKyaC_UeP_coWzEbe8GVZ3-IRKobtDXXpkMyBogW2fWkXiOoxeU1MxXkhJ6XYzZ6Bx6ioM3105fivfLR75wajobXae6_MM?purpose=inline" alt="Poovar backwaters" loading="lazy"><span class="package-number">04</span><h4>Poovar</h4></div>
+                    </div>
+                </article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 05</span><h3>Wayanad Wilderness</h3><p class="package-description">Hills • Forests • Waterfalls</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Chamravattam_Bridge_-_panoramio.jpg?width=900" alt="Lakkidi View Point" loading="lazy"><span class="package-number">01</span><h4>Lakkidi View Point</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elephant_District_of_Wayanad%2C_Kerala%2C_India.jpg?width=900" alt="Chain Tree" loading="lazy"><span class="package-number">02</span><h4>Chain Tree</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kuruva_Island_Wayanad.JPG?width=900" alt="Pookode Lake" loading="lazy"><span class="package-number">03</span><h4>Pookode Lake</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Banasura_Sagar_Dam.jpg?width=900" alt="Banasura Sagar Dam" loading="lazy"><span class="package-number">04</span><h4>Banasura Sagar Dam</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chembra_Peak_Heart_Lake.jpg?width=900" alt="Karlad Lake" loading="lazy"><span class="package-number">05</span><h4>Karlad Lake</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Edakkal_Caves_-_Petroglyphs_-_4.jpg?width=900" alt="Edakkal Caves" loading="lazy"><span class="package-number">06</span><h4>Edakkal Caves</h4></div></div><div class="package-grid two-centered"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thirunelli_Temple.JPG?width=900" alt="Phantom Rock" loading="lazy"><span class="package-number">07</span><h4>Phantom Rock</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Neyyar_Dam_TVM.jpg?width=900" alt="Karapuzha Dam" loading="lazy"><span class="package-number">08</span><h4>Karapuzha Dam</h4></div></div></article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 06</span><h3>Munnar Misty Hills</h3><p class="package-description">Tea Gardens • Mountains • Lakes</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thusharagiri_waterfall.jpg?width=900" alt="Waterfalls" loading="lazy"><span class="package-number">01</span><h4>Waterfalls</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tea_plantation_munnar.jpg?width=900" alt="Munnar Hills" loading="lazy"><span class="package-number">02</span><h4>Munnar Hills</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Munnar_25-10-10_13-52-43-764.jpg?width=900" alt="Tea Museum" loading="lazy"><span class="package-number">03</span><h4>Tea Museum</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mattupetty_Dam.jpg?width=900" alt="Mattupetty Dam" loading="lazy"><span class="package-number">04</span><h4>Mattupetty Dam</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Landscape_view_of_Echo_Point_Munnar%2C_Kerela%2C_India.jpg?width=900" alt="Echo Point" loading="lazy"><span class="package-number">05</span><h4>Echo Point</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Munnar_Top_Station.jpg?width=900" alt="Kundala Lake" loading="lazy"><span class="package-number">06</span><h4>Kundala Lake</h4></div></div><div class="package-grid two-centered"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nilgiri_tahr_%28Nilgiritragus_hylocrius%29_female.jpg?width=900" alt="Eravikulam National Park" loading="lazy"><span class="package-number">07</span><h4>Eravikulam National Park</h4></div></div></article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 07</span><h3>Alleppey Backwater Bliss</h3><p class="package-description">Houseboats • Canals • Coastal Views</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nedumudy_-_Houseboat.jpg?width=900" alt="Backwater Cruise / Houseboat" loading="lazy"><span class="package-number">01</span><h4>Backwater Cruise / Houseboat</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mararikulam_Beach_2.jpg?width=900" alt="Alappuzha Beach" loading="lazy"><span class="package-number">02</span><h4>Alappuzha Beach</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alappuza_Lighthouse2.jpg?width=900" alt="Lighthouse & Local Sightseeing" loading="lazy"><span class="package-number">03</span><h4>Lighthouse & Local Sightseeing</h4></div></div></article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 08</span><h3>Thekkady Nature Escape</h3><p class="package-description">Wildlife • Spice Gardens • Nature</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thekkady_Lake.jpg?width=900" alt="Thekkady Hills" loading="lazy"><span class="package-number">01</span><h4>Thekkady Hills</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Periyar_National_Park-Thekkady_Lake_-_Jalakanyaka-WUS07796.jpg?width=900" alt="Periyar Area" loading="lazy"><span class="package-number">02</span><h4>Periyar Area</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elettaria_cardamomum_Capsules_and_seeds.jpg?width=900" alt="Spice Plantation" loading="lazy"><span class="package-number">03</span><h4>Spice Plantation</h4></div></div><div class="package-grid two-centered"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Thekkady_Lake.jpg?width=900" alt="Local Sightseeing" loading="lazy"><span class="package-number">04</span><h4>Local Sightseeing</h4></div></div></article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 09</span><h3>Vagamon Green Getaway</h3><p class="package-description">Meadows • Pine Forest • Viewpoints</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vagamon_hills_of_Kerala_03.jpg?width=900" alt="Vagamon Meadows" loading="lazy"><span class="package-number">01</span><h4>Vagamon Meadows</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vagamon_Pine_Valley.jpg?width=900" alt="Pine Forest" loading="lazy"><span class="package-number">02</span><h4>Pine Forest</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illikkal_Kallu_%28%E0%B4%87%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%BD_%E0%B4%95%E0%B4%B2%E0%B5%8D%E0%B4%B2%E0%B5%8D_%29.jpg?width=900" alt="Viewpoints & Activities" loading="lazy"><span class="package-number">03</span><h4>Viewpoints & Activities</h4></div></div></article>
+
+                <article class="sightseeing-package reveal"><span class="package-kicker">PACKAGE 10</span><h3>Kochi & Athirappilly</h3><p class="package-description">Heritage • City • Waterfalls</p><div class="package-grid"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_Fishing_Nets_-_3.jpg?width=900" alt="Fort Kochi & Chinese Fishing Nets" loading="lazy"><span class="package-number">01</span><h4>Fort Kochi & Chinese Fishing Nets</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jew_Street_Mattancherry%2C_Fort_Kochi%2C_Ernakulam%2C_Kerala%2C_India_IMG_20190526_150112.jpg?width=900" alt="Mattancherry" loading="lazy"><span class="package-number">02</span><h4>Mattancherry</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Athirappilly_Falls_2025_June.jpg?width=900" alt="Athirappilly Waterfalls" loading="lazy"><span class="package-number">03</span><h4>Athirappilly Waterfalls</h4></div></div><div class="package-grid two-centered"><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kerala_-_Sentinel_Falls_%2815784346247%29.jpg?width=900" alt="Vazhachal" loading="lazy"><span class="package-number">04</span><h4>Vazhachal</h4></div><div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Marine_Drive_Kochi.jpg?width=900" alt="Marine Drive" loading="lazy"><span class="package-number">05</span><h4>Marine Drive</h4></div></div></article>
+
+            </div>
+
+            <div class="pilgrimage-block">
+                <div class="section-heading reveal">
+                    <span>Sacred Journeys</span>
+                    <h2>Pilgrimage Tour Packages</h2>
+                    <p>Comfortable travel arrangements for your spiritual journeys.</p>
+                </div>
+                <div class="package-grid pilgrimage-grid">
+                    <div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Velankanni_Basilica.jpg?width=900" alt="Velankanni" loading="lazy"><h4>Velankanni Divine Journey</h4><a class="btn btn-dark" href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20I%20would%20like%20to%20enquire%20about%20the%20Velankanni%20pilgrimage%20package." target="_blank">Enquire on WhatsApp</a></div>
+                    <div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/009392022_Guruvayur_temple%2C_Kerala_024.jpg?width=900" alt="Guruvayur" loading="lazy"><h4>Guruvayur Temple Visit</h4><a class="btn btn-dark" href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20I%20would%20like%20to%20enquire%20about%20the%20Guruvayur%20pilgrimage%20package." target="_blank">Enquire on WhatsApp</a></div>
+                    <div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/MOUNTAINS_SABARIMALA_KERALA_-_panoramio.jpg?width=900" alt="Sabarimala" loading="lazy"><h4>Sabarimala Ayyappa Pilgrimage</h4><a class="btn btn-dark" href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20I%20would%20like%20to%20enquire%20about%20the%20Sabarimala%20pilgrimage%20package." target="_blank">Enquire on WhatsApp</a></div>
+                    <div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ramanathaswamy_Temple_Rameswaram.jpg?width=900" alt="Rameswaram" loading="lazy"><h4>Rameswaram</h4><a class="btn btn-dark" href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20I%20would%20like%20to%20enquire%20about%20the%20Rameswaram%20pilgrimage%20package." target="_blank">Enquire on WhatsApp</a></div>
+                    <div class="package-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palani_Murugan_Temple.jpg?width=900" alt="Palani" loading="lazy"><h4>Palani Murugan</h4><a class="btn btn-dark" href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20I%20would%20like%20to%20enquire%20about%20the%20Palani%20pilgrimage%20package." target="_blank">Enquire on WhatsApp</a></div>
+                </div>
+            </div>
+
+            <div class="sightseeing-vehicles">
+                <div class="section-heading">
+                    <span>Travel in comfort</span>
+                    <h2>The right vehicle for every journey.</h2>
+                    <p>Choose a comfortable ride for your family, friends or larger group.</p>
+                </div>
+                <div class="vehicle-grid">
+                    <div class="vehicle-box"><h4>Private Cabs</h4><p>4 &amp; 7 seater</p></div>
+                    <div class="vehicle-box"><h4>Travellers</h4><p>14, 17 &amp; 20 seater</p></div>
+                    <div class="vehicle-box"><h4>Mini Buses</h4><p>24 &amp; 30 seater</p></div>
+                    <div class="vehicle-box"><h4>Large Buses</h4><p>34 &amp; 49 seater</p></div>
+                </div>
+            </div>
+
+            <div class="sightseeing-cta reveal">
+                <div>
+                    <h3>Planning a sightseeing trip?</h3>
+                    <p>Message us for package details, vehicle availability and rates.</p>
+                </div>
+                <a href="https://wa.me/919544202811?text=Hi%20Guru%20Holiday%20%26%20Fleet%2C%20please%20share%20your%20sightseeing%20packages%20and%20vehicle%20rates." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Enquire Now</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         FLEET
+         FLEET + PRICING
+    ========================= -->
+
+    <section class="fleet" id="fleet">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Our Fleet</span>
+
+                <h2>
+                    Choose The Right Vehicle For Your Journey
+                </h2>
+
+                <p>
+                    Comfortable vehicles with clear pricing
+                    for convenient Kerala travel.
+                </p>
+
+            </div>
+
+
+            <div class="fleet-grid">
+
+
+                <!-- G9 -->
+
+                <div class="fleet-card reveal">
+
+                    <div class="fleet-image">
+
+                        <img
+                            src="g9.jpg"
+                            alt="Swift Dzire"
+                        >
+
+                    </div>
+
+
+                    <div class="fleet-content">
+
+                        <h3>
+                            Swift Dzire
+                        </h3>
+
+                        <div class="fleet-spec">
+                            8 HR / 80 KM
+                        </div>
+
+
+                        <div class="fleet-price">
+
+                            <span>
+                                Starting from
+                            </span>
+
+                            <strong>
+                                ₹2,000/-
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- G7 -->
+
+                <div class="fleet-card reveal">
+
+                    <div class="fleet-image">
+
+                        <img
+                            src="g7.jpg"
+                            alt="Ertiga"
+                        >
+
+                    </div>
+
+
+                    <div class="fleet-content">
+
+                        <h3>
+                            Ertiga
+                        </h3>
+
+                        <div class="fleet-spec">
+                            8 HR / 80 KM
+                        </div>
+
+
+                        <div class="fleet-price">
+
+                            <span>
+                                Starting from
+                            </span>
+
+                            <strong>
+                                ₹2,400/-
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- G8 -->
+
+                <div class="fleet-card reveal">
+
+                    <div class="fleet-image">
+
+                        <img
+                            src="g8.jpg"
+                            alt="Innova"
+                        >
+
+                    </div>
+
+
+                    <div class="fleet-content">
+
+                        <h3>
+                            Innova
+                        </h3>
+
+                        <div class="fleet-spec">
+                            8 HR / 80 KM
+                        </div>
+
+
+                        <div class="fleet-price">
+
+                            <span>
+                                Starting from
+                            </span>
+
+                            <strong>
+                                ₹2,600/-
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- G1 -->
+
+                <div class="fleet-card reveal">
+
+                    <div class="fleet-image">
+
+                        <img
+                            src="g1.jpg"
+                            alt="Innova Crysta L"
+                        >
+
+                    </div>
+
+
+                    <div class="fleet-content">
+
+                        <h3>
+                            Innova Crysta L
+                        </h3>
+
+                        <div class="fleet-spec">
+                            8 HR / 80 KM
+                        </div>
+
+
+                        <div class="fleet-price">
+
+                            <span>
+                                Starting from
+                            </span>
+
+                            <strong>
+                                ₹3,500/-
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LARGER VEHICLES -->
+
+                <div class="request-card reveal">
+
+                    <h3>
+                        Larger Vehicles Available on Request
+                    </h3>
+
+                    <p>
+                        Ideal for tours, group travel,
+                        family functions and special journeys.
+                    </p>
+
+
+                    <div class="seater-list">
+
+                        <span class="seater">
+                            12 Seater
+                        </span>
+
+                        <span class="seater">
+                            17 Seater
+                        </span>
+
+                        <span class="seater">
+                            20 Seater
+                        </span>
+
+                        <span class="seater">
+                            25 Seater
+                        </span>
+
+                        <span class="seater">
+                            30 Seater
+                        </span>
+
+                        <span class="seater">
+                            34 Seater
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="tel:+919544202811"
+                        class="btn btn-dark"
+                    >
+                        Enquire Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+         GALLERY + VIDEOS
+    ========================= -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Gallery</span>
+
+                <h2>
+                    Our Vehicles & Travel Moments
+                </h2>
+
+                <p>
+                    Explore our vehicles, travel moments and
+                    experiences through our gallery.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 IMAGE GALLERY
+            ========================= -->
+
+            <div class="gallery-grid">
+
+
+                <!-- G2 -->
+
+                <div class="gallery-item reveal">
+
+                    <img
+                        src="g2.jpg"
+                        alt="Travel Experience"
+                    >
+
+                </div>
+
+
+                <!-- G3 -->
+
+                <div class="gallery-item reveal">
+
+                    <img
+                        src="g3.jpg"
+                        alt="Guru Holiday Fleet"
+                    >
+
+                </div>
+
+
+                <!-- G4 -->
+
+                <div class="gallery-item reveal">
+
+                    <img
+                        src="g4.jpg"
+                        alt="Travel"
+                    >
+
+                </div>
+
+
+                <!-- G5 -->
+
+                <div class="gallery-item reveal">
+
+                    <img
+                        src="g5.jpg"
+                        alt="Travel Moment"
+                    >
+
+                </div>
+
+
+                <!-- G6 -->
+
+                <div class="gallery-item reveal">
+
+                    <img
+                        src="g6.jpg"
+                        alt="Fleet Travel"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 VIDEOS
+            ========================= -->
+
+            <div class="media-title reveal">
+
+                <h3>
+                    Travel Videos
+                </h3>
+
+                <p>
+                    Take a closer look at our vehicles and journeys.
+                </p>
+
+            </div>
+
+
+            <div class="video-grid">
+
+
+                <!-- GV1 -->
+
+                <div class="video-card reveal">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="gv1.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+
+                    <div class="video-caption">
+                        Travel With Guru Holiday & Fleet
+                    </div>
+
+                </div>
+
+
+
+                <!-- GV2 -->
+
+                <div class="video-card reveal">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="gv2.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+
+                    <div class="video-caption">
+                        Comfortable Journeys
+                    </div>
+
+                </div>
+
+
+
+                <!-- GV3 -->
+
+                <div class="video-card reveal">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="gv3.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+
+                    <div class="video-caption">
+                        Your Journey, Our Priority
+                    </div>
+
+                </div>
+
+                
+
+
+                <!-- GV4 -->
+
+                <div class="video-card reveal">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="gv4.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+
+                <div class="video-caption">
+                        Trip Mood
+                </div>
+
+                </div> <!-- CLOSE GV4 -->
+
+
+                <!-- GV5 -->
+
+                <div class="video-card reveal">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="gv5.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support video playback.
+
+                    </video>
+
+
+                    <div class="video-caption">
+                        Family and Friends 
+                    </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         REVIEWS & FEEDBACK
+    ========================= -->
+
+    <section class="reviews" id="reviews">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Reviews & Feedback</span>
+
+                <h2>
+                    What Our Customers Say
+                </h2>
+
+                <p>
+                    Your feedback helps us improve our service
+                    and helps other travellers choose with confidence.
+                </p>
+
+            </div>
+
+
+            <!-- EXISTING REVIEWS -->
+
+            <div class="reviews-grid">
+
+
+                <div class="review-card reveal">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Very comfortable journey and excellent
+                        service. The vehicle was clean and the
+                        overall experience was smooth.
+                    </p>
+
+                    <h4>
+                        Happy Customer
+                    </h4>
+
+                    <small>
+                        Kerala
+                    </small>
+
+                </div>
+
+
+
+                <div class="review-card reveal">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Professional service and a very comfortable
+                        vehicle. The journey was convenient from
+                        start to finish.
+                    </p>
+
+                    <h4>
+                        Family Traveller
+                    </h4>
+
+                    <small>
+                        Kerala
+                    </small>
+
+                </div>
+
+
+
+                <div class="review-card reveal">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Good vehicle, friendly service and a smooth
+                        travel experience. Would definitely consider
+                        using the service again.
+                    </p>
+
+                    <h4>
+                        Satisfied Traveller
+                    </h4>
+
+                    <small>
+                        Kerala
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REVIEW FORM -->
+
+            <form
+                class="review-form reveal"
+                id="reviewForm"
+            >
+
+                <h3>
+                    Leave a Review
+                </h3>
+
+
+                <p>
+                    Your review can be submitted here.
+                    Connect this form to your Google Form/Firebase
+                    backend when you want reviews to be publicly
+                    shared between visitors.
+                </p>
+
+
+                <div class="form-row">
+
+
+                    <div class="field">
+
+                        <label for="reviewName">
+                            Name
+                        </label>
+
+
+                        <input
+                            id="reviewName"
+                            required
+                            placeholder="Your name"
+                        >
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="reviewRating">
+                            Rating
+                        </label>
+
+
+                        <select id="reviewRating">
+
+                            <option value="5">
+                                ★★★★★
+                            </option>
+
+                            <option value="4">
+                                ★★★★☆
+                            </option>
+
+                            <option value="3">
+                                ★★★☆☆
+                            </option>
+
+                            <option value="2">
+                                ★★☆☆☆
+                            </option>
+
+                            <option value="1">
+                                ★☆☆☆☆
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <label for="reviewText">
+                        Your review
+                    </label>
+
+
+                    <textarea
+                        id="reviewText"
+                        required
+                        placeholder="Tell us about your journey..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <button
+                    class="btn btn-primary"
+                    type="submit"
+                >
+                    Submit Review
+                </button>
+
+
+
+                <div
+                    class="form-message"
+                    id="formMessage"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-content reveal">
+
+                <h2>
+                    Ready For Your Next Journey?
+                </h2>
+
+
+                <p>
+                    Contact Guru Holiday and Fleet today
+                    and let us help you travel comfortably.
+                </p>
+
+
+                <div class="hero-buttons"
+                     style="justify-content:center;">
+
+                    <a
+                        href="tel:+919544202811"
+                        class="btn btn-primary"
+                    >
+                        Call Now
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/919544202811"
+                        target="_blank"
+                        class="btn btn-outline"
+                    >
+                        WhatsApp Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Contact Us</span>
+
+                <h2>
+                    Let's Plan Your Journey
+                </h2>
+
+                <p>
+                    Get in touch with us for vehicle availability,
+                    pricing and travel enquiries.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info reveal">
+
+                    <h3>
+                        Guru Holiday and Fleet
+                    </h3>
+
+
+                    <p>
+                        Comfortable travel, trusted journeys
+                        and reliable service in Kerala.
+                    </p>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Phone
+                            </strong>
+
+                            <a href="tel:+919544202811">
+                                +91 95442 02811
+                            </a>
+
+                            <br>
+
+                            <a href="tel:+919544202811">
+                                +91 99471 72811
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💬
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                WhatsApp
+                            </strong>
+
+                            <a
+                                href="https://wa.me/919544202811"
+                                target="_blank"
+                            >
+                                Chat With Us
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Address
+                            </strong>
+
+                            <span>
+                                Nila, Bunglavil Rd,
+                                Venpalavattom,
+                                Thiruvananthapuram,
+                                Kerala 695029
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ◎
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Instagram
+                            </strong>
+
+                            <a
+                                href="https://www.instagram.com/guru_holiday_fleet/"
+                                target="_blank"
+                            >
+                                @guru_holiday_fleet
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GOOGLE MAP -->
+
+                <div class="map reveal">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Nila%2C%20Bunglavil%20Rd%2C%20Venpalavattom%2C%20Thiruvananthapuram%2C%20Kerala%20695029&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <img
+                        src="logo.jpg"
+                        alt="Guru Holiday and Fleet Logo"
+                    >
+
+
+                    <p>
+                        Comfortable travel, trusted journeys
+                        and reliable vehicles for your Kerala
+                        travel needs.
+                    </p>
+
+
+                </div>
+                
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Guru Holiday and Fleet.
+                    All Rights Reserved.
+                </span>
+
+
+                <span>
+                    Your Journey, Our Priority
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         WHATSAPP
+    ========================= -->
+
+    <a
+        href="https://wa.me/919544202811"
+        target="_blank"
+        class="whatsapp"
+        aria-label="Chat on WhatsApp"
+    >
+        ◉
+    </a>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           PRELOADER
+        ========================= */
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                const preloader =
+                    document.getElementById("preloader");
+
+                if (preloader) {
+                    preloader.classList.add("hide");
+                }
+
+            }, 2000);
+
+        });
+
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("active");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(function (element) {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* =========================
+           REVIEW FORM
+        ========================= */
+
+        const reviewForm =
+            document.getElementById("reviewForm");
+
+        const formMessage =
+            document.getElementById("formMessage");
+
+
+        reviewForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("reviewName").value.trim();
+
+            const rating =
+                document.getElementById("reviewRating").value;
+
+            const review =
+                document.getElementById("reviewText").value.trim();
+
+
+            if (!name || !review) {
+
+                formMessage.textContent =
+                    "Please enter your name and review.";
+
+                return;
+
+            }
+
+
+            formMessage.textContent =
+                "Thank you, " +
+                name +
+                "! Your " +
+                rating +
+                "-star feedback has been received.";
+
+
+            reviewForm.reset();
+
+        });
+
+    </script>
+
+
+</body>
+</html>
